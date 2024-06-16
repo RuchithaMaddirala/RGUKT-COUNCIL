@@ -31,7 +31,7 @@ function Register() {
       };
       setLoading(true);
       const { data } = await axios.post(
-        "http://localhost:8005/api/users/signup",
+        "https://rgukt-council-backend.vercel.app/api/users/signup",
         {
           username,
           email,

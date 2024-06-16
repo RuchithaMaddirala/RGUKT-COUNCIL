@@ -5,7 +5,7 @@ const clubEvents = async (name) => {
   let clubEventsList = [];
   try {
     const response = await axios.get(
-      `http://localhost:8005/club-events?clubName=${clubName}`
+      `https://rgukt-council-backend.vercel.app/club-events?clubName=${clubName}`
     );
     clubEventsList = await response.data;
     return clubEventsList;

@@ -5,9 +5,9 @@ const clubProfile = async ({ clubId, clubName }) => {
   try {
     let url;
     if (clubId) {
-      url = `http://localhost:8005/clubProfile?clubId=${clubId}`;
+      url = `https://rgukt-council-backend.vercel.app/clubProfile?clubId=${clubId}`;
     } else if (clubName) {
-      url = `http://localhost:8005/clubProfile?clubName=${clubName}`;
+      url = `https://rgukt-council-backend.vercel.app/clubProfile?clubName=${clubName}`;
     } else {
       throw new Error("Missing parameterss: clubId or clubName");
     }
