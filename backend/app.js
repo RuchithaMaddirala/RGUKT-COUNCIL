@@ -10,7 +10,12 @@ const { User } = require("./src/mongo");
 
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
-app.use(cors());
+
+const corsOptions = {
+  origin: 'https://club-council-rguktb.netlify.app',
+  optionsSuccessStatus: 200
+};
+app.use(cors(corsOptions));
 app.use(bodyParser.json());
 app.use(cookieParser());
 
