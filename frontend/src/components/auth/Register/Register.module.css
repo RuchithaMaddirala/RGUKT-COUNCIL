@@ -23,19 +23,20 @@
 	background-color: white;
 	border-top-left-radius: 10px;
 	border-bottom-left-radius: 10px;
+	position: relative; /* Added for positioning the back button */
   }
   
   .register_form {
 	display: flex;
 	flex-direction: column;
 	align-items: center;
-	margin-top: 30px;
+	margin-top: 20px; /* Adjusted to fit content */
   }
   
   .logo_title_container {
 	display: flex;
 	align-items: center;
-	margin-top: 50px;
+	margin-top: 20px; /* Adjusted to fit content */
   }
   
   .register_title {
@@ -105,7 +106,7 @@
   .register_green_btn {
 	background-color: #0084ff;
 	color: white;
-	margin: 60px 0 10px 0;
+	margin: 50px 0 10px 0;
   }
   
   .register_white_btn {
@@ -130,4 +131,23 @@
 	box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2);
 	transform: translateX(-50%);
   }
+  
+  .back_button {
+	background: none;
+	border: 2px solid #0084ff;
+	border-radius: 50%;
+	color: #0084ff;
+	cursor: pointer;
+	position: absolute;
+	top: 20px; /* Adjust top value as needed */
+	left: 20px; /* Adjust left value as needed */
+	z-index: 3; /* Ensure it is above other elements */
+	transition: 0.3s;
+  }
+
+  .back_button:hover{
+	color: #ffffff;
+	background-color: #0084ff;
+  }
+  
   

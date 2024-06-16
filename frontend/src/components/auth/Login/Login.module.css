@@ -23,6 +23,7 @@
 	background-color: white;
 	border-top-left-radius: 10px;
 	border-bottom-left-radius: 10px;
+	position: relative; /* Added for positioning the back button */
   }
   
   .login_form {
@@ -41,7 +42,6 @@
   .login_title {
 	font-size: 40px;
   }
-  
   
   .login_input {
 	outline: none;
@@ -130,5 +130,23 @@
 	transform: scale(1.05);
 	box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2);
 	transform: translateX(-50%);
+  }
+  
+  .back_button {
+	background: none;
+	border: 2px solid #0084ff;
+	border-radius: 50%;
+	color: #0084ff;
+	cursor: pointer;
+	position: absolute;
+	top: 20px; /* Adjust top value as needed */
+	left: 20px; /* Adjust left value as needed */
+	z-index: 3; /* Ensure it is above other elements */
+	transition: 0.3s;
+  }
+
+  .back_button:hover{
+	color: #ffffff;
+	background-color: #0084ff;
   }
   

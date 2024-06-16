@@ -5,6 +5,7 @@ import Loader from "../Loader/Loader";
 import { Link } from "react-router-dom";
 import { useNavigate } from "react-router-dom";
 import ErrorMessage from "../Error/ErrorMessage";
+import { IoArrowBack } from 'react-icons/io5';
 
 function Register() {
   const [username, setUsername] = useState("");
@@ -15,6 +16,7 @@ function Register() {
   const [error, setError] = useState(false);
   const [loading, setLoading] = useState(false);
   const navigate = useNavigate();
+
   const handleSubmit = async (e) => {
     e.preventDefault();
     if (password !== confirmPassword) {
@@ -38,7 +40,6 @@ function Register() {
         },
         config
       );
-      // console.log(data);
       localStorage.setItem("userInfo", JSON.stringify(data));
       setLoading(false);
       navigate("/");
@@ -52,6 +53,12 @@ function Register() {
     <div className={styles.register_container}>
       <div className={styles.register_form_container}>
         <div className={styles.register_left}>
+          <button 
+            type="button" 
+            onClick={() => navigate(-1)} 
+            className={styles.back_button}>
+            <IoArrowBack size={24} />
+          </button>
           <div className={styles.logo_title_container}>
             <img
               className="w-20"

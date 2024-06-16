@@ -5,6 +5,7 @@ import Loader from "../Loader/Loader";
 import { Link } from "react-router-dom";
 import { useNavigate } from "react-router-dom";
 import ErrorMessage from "../Error/ErrorMessage";
+import { IoArrowBack } from "react-icons/io5";
 
 function Login() {
   const [username, setUsername] = useState("");
@@ -43,6 +44,12 @@ function Login() {
     <div className={styles.login_container}>
       <div className={styles.login_form_container}>
         <div className={styles.login_left}>
+          <button 
+            type="button" 
+            onClick={() => navigate(-1)} 
+            className={`${styles.back_button}`}>
+            <IoArrowBack size={24} />
+          </button>
           <div className={styles.logo_title_container}>
             <img
               className="w-20"
