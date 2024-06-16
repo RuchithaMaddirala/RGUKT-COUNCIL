@@ -15,7 +15,9 @@ app.use(bodyParser.json());
 app.use(cookieParser());
 
 // ROOT ROUTE
-app.get("/", cors(), (req, res) => {});
+app.get("/", cors(), (req, res) => {
+  res.json({message:"Backend"})
+});
 
 // USER AUTHENTICATION ROUTES
 app.use("/api/users/", userRoutes);
