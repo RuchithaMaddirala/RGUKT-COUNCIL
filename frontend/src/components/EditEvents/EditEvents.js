@@ -21,7 +21,7 @@ const EditEvent = () => {
   useEffect(() => {
     const fetchEventData = async () => {
       try {
-        const response = await axios.get(`/all-events/${id}`);
+        const response = await axios.get(`https://rgukt-council-backend.vercel.app/all-events/${id}`);
         setEventData(response.data[0]);
       } catch (error) {
         console.error("Error fetching event data", error);
@@ -67,7 +67,7 @@ const EditEvent = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      await axios.put(`/edit-event/${id}`, eventData);
+      await axios.put(`https://rgukt-council-backend.vercel.app/edit-event/${id}`, eventData);
       alert("Event updated successfully");
       navigate(`/events`);
     } catch (error) {

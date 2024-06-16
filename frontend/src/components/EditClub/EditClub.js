@@ -21,7 +21,7 @@ const EditClub = () => {
   useEffect(() => {
     const fetchClubData = async () => {
       try {
-        const response = await axios.get(`/clubProfile?clubId=${id}`);
+        const response = await axios.get(`https://rgukt-council-backend.vercel.app/clubProfile?clubId=${id}`);
         setClubData(response.data[0]);
       } catch (error) {
         console.error("Error fetching club data", error);
@@ -41,7 +41,7 @@ const EditClub = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      await axios.put(`/edit-club/${id}`, clubData);
+      await axios.put(`https://rgukt-council-backend.vercel.app/edit-club/${id}`, clubData);
       alert("Club updated successfully");
       navigate(`/club-profile/${id}`);
     } catch (error) {

@@ -24,7 +24,7 @@ const AddEvents = () => {
     // Fetch club details when the component mounts
     const fetchClubDetails = async () => {
       try {
-        const response = await axios.get(`http://localhost:8005/clubProfile?clubId=${id}`);
+        const response = await axios.get(`https://rgukt-council-backend.vercel.app/clubProfile?clubId=${id}`);
         const clubData = response.data[0];
         setClubName(clubData.clubName);
       } catch (error) {
@@ -88,7 +88,7 @@ const AddEvents = () => {
     setErrorMessage(false);
     try {
       const res = await axios.post(
-        `http://localhost:8005/add-event/${id}`,
+        `https://rgukt-council-backend.vercel.app/add-event/${id}`,
         eventData
       );
       console.log(res);

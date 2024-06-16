@@ -14,8 +14,8 @@ import "./galleryStyles.css";
 export default function Gallery(props) {
   let { imageArray } = props;
   const onInit = () => {
-    console.log("lightGallery has been initialized");
-    console.log(imageArray);
+    // console.log("lightGallery has been initialized");
+    // console.log(imageArray);
   };
   return (
     <div className="scroll">
