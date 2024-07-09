@@ -4,7 +4,6 @@ import { NavLink } from "react-router-dom";
 import { GoHome } from "react-icons/go";
 import { FaRegCompass, FaTicketAlt, FaBug } from "react-icons/fa";
 import { HiOutlineSpeakerphone } from "react-icons/hi";
-import { IoIosInformationCircleOutline } from "react-icons/io";
 import { SlCalender } from "react-icons/sl";
 import { GrGallery } from "react-icons/gr";
 
@@ -20,7 +19,7 @@ const Sidebar = () => {
       </a>
       <div className="mt-10">
         <div className="mb-6">
-          <NavLink to="/" className="nav-item" activeclassname="active">
+          <NavLink to="/home" className="nav-item" activeclassname="active">
             <div className="nav-item-content flex items-center mb-2 hover:bg-gray-100 hover:rounded-md h-10 cursor-pointer  pl-4">
               <GoHome className="text-gray-700 mr-4" />
               <p className="text-gray-700 font-medium title nav-item-text">

@@ -8,8 +8,6 @@ import Clubs from "./components/Clubs/Clubs";
 import Events from "./components/Events/Events";
 import Calender from "./components/Calender/Calender";
 // import Gallery from "./components/Gallery/Gallery";
-import ClubCouncil from "./components/ClubCouncil/ClubCouncil";
-import SupervisoryBodies from "./components/SupervisoryBodies/SupervisoryBodies";
 import BugReport from "./components/BugReport/BugReport";
 import Event from "./components/Event/Event";
 import AddEvents from "./components/Events/AddEvents";
@@ -25,6 +23,7 @@ import ProtectedRouteSuperAdmin from "./protectedRoutes/ProtectedRouteSuperAdmin
 import EditClub from "./components/EditClub/EditClub";
 import ProtectedRouteClubAdmin from "./protectedRoutes/ProtectedRouteClubAdmin";
 import ProtectedRouteEventAdmin from "./protectedRoutes/ProtectedRouteEventAdmin";
+import LandingPage from "./components/LandingPage/LandingPage";
 const appRouter = createBrowserRouter([
   {
     path: "/",
@@ -32,6 +31,10 @@ const appRouter = createBrowserRouter([
     children: [
       {
         path: "/",
+        element: <LandingPage />,
+      },
+      {
+        path: "/home",
         element: <Home />,
       },
       {
