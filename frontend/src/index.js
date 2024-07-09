@@ -51,14 +51,6 @@ const appRouter = createBrowserRouter([
         element: <GalleryMain />,
       },
       {
-        path: "/about/club-council",
-        element: <ClubCouncil />,
-      },
-      {
-        path: "/about/supervisory-bodies",
-        element: <SupervisoryBodies />,
-      },
-      {
         path: "/bug-report",
         element: <BugReport />,
       },
