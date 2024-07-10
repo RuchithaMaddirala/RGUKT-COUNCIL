@@ -82,7 +82,7 @@ const LandingPage = () => {
           </div>
         </div>
         <h1 className="font-bold text-wrap text-center text-4xl font-sans text-darkBlue mt-28 relative">
-          For any queries contact <br/> Team Kavach
+          For any queries contact <br/> TEAM KAVACH
         </h1>
     </div>
 
